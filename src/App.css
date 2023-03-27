@@ -13,6 +13,24 @@
   }
 }
 
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #212521;
+  color: white;
+  padding: 25px 60px; /** * top/boton raight/left **/
+  margin-bottom: 15px;
+}
+
+.cart {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonNavBar {
+  justify-content: space-between;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
