@@ -1,15 +1,13 @@
 import CartWidget from "../CardWidget/CardWidget";
+import "./NavBar.css";
 
 const NavBar = () => {
   return (
-    <nav className="navBar">
+    <nav className="nav">
       <h3>Tienda</h3>
       <div className="buttonNavBar">
-        <button>Mochila</button>
-        <button>Sudadera</button>
-        <button>Anteojos</button>
-        <button>Gorrito</button>
-        <button>Gorrito</button>
+        <button className="btnNav">Jeans</button>
+        <button className="btnNav">Remeras</button>
       </div>
       <div>
         <CartWidget />

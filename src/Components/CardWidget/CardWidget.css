@@ -1,0 +1,4 @@
+.cartCarrito {
+  display: flex;
+  flex-direction: row;
+}

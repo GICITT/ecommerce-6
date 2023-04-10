@@ -1,6 +1,8 @@
+import "./CardWidget.css";
+
 const CartWidget = () => {
   return (
-    <div className="cart">
+    <div className="cartCarrito">
       <i className="bi bi-cart"></i>
       <div id="cardAmount" className="cardAmount">
         0

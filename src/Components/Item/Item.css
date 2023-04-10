@@ -1,0 +1,40 @@
+.img {
+  width: 250px;
+  height: 350px;
+  margin-top: 50px;
+}
+
+.card {
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  width: 400px;
+  height: 600px;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid rgb(9, 9, 9);
+}
+
+.btnDetalle {
+  border-radius: 10%;
+}
+
+.card-body {
+  margin-top: 40px;
+}
+
+.label {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.btnDetalle {
+  margin-top: 10px;
+  border: radius;
+  color: rgba(242, 234, 220, 0.829);
+  border-radius: 5px;
+  font-size: x-large;
+  background-color: #050505;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

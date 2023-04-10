@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #050505;
+  color: white;
+  padding: 25px 60px; /** * top/boton raight/left **/
+  margin-bottom: 15px;
+}
+
+.buttonNavBar {
+  gap: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.btnNav {
+  border: radius;
+  color: rgba(196, 135, 30, 0.829);
+  border-radius: 5px;
+  font-size: x-large;
+  background-color: #050505;
+  height: 45px;
+  width: 100px;
+}
+
+.btnNav:hover {
+  color: rgb(202, 151, 11);
+  box-shadow: 5px 5px;
+}
