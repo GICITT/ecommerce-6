@@ -1,0 +1,26 @@
+.itemCount {
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-content: space-between;
+}
+
+.btnIncrementDecrement {
+  height: 30px;
+  width: 30px;
+  margin-top: 15px;
+}
+
+.quantify {
+  margin-bottom: 100px;
+}
+
+.btnContainer {
+  margin-left: 100px;
+}

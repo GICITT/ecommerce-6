@@ -16,7 +16,7 @@ let productos = [
 export let mockFetch = (id) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(productos);
-    }, 2000);
+      resolve(id ? productos.find((prod) => prod.id === id) : productos);
+    }, 1000);
   });
 };

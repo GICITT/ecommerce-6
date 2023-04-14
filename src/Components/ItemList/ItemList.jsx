@@ -8,6 +8,7 @@ const ItemList = ({ productos }) => {
       producto // mapeame el array prdoductos y por cada producto devolveme una card producto
     ) => (
       <Item
+        key={producto.id}
         id={producto.id}
         img={producto.img}
         categoria={producto.categoria}

@@ -1,0 +1,16 @@
+.contenedorDetail {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(224, 159, 37);
+}
+
+.img {
+  width: 250px;
+  height: 350px;
+  margin-top: 50px;
+}
+
+.contenedorCard {
+  background-color: rgb(227, 237, 246);
+  
+}

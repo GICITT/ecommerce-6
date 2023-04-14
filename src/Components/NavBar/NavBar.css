@@ -9,7 +9,7 @@
 }
 
 .buttonNavBar {
-  gap: 5px;
+  gap: 50px;
   display: flex;
   justify-content: space-between;
 }
