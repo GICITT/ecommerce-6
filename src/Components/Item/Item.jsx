@@ -10,8 +10,8 @@ export const Item = ({ id, categoria, img, precio }) => {
         <br></br>
         <label className="label">Precio: ${precio}</label>
       </div>
-      <Link to={`/detail/${id}`}>
-        <button className="btnDetalle">Detalle</button>
+      <Link to="/detail">
+        <button className="btnDetalle"> Detalle</button>
       </Link>
     </div>
   );

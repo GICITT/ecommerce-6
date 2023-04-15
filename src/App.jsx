@@ -13,10 +13,10 @@ export default function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<ItemListContainer />} />
-          <Route path="/detail/:id" element={<ItemDetailContainer />} />
+          <Route path="/categoria" element={<ItemListContainer />} />
+          <Route path="/detail" element={<ItemDetailContainer />} />
           <Route path="/form" element={<FormContainer />} />
           <Route path="/cartContountainer" element={<CartCountainer />} />
-
           {/*<Route path="/form" element={<FormContainer />} />  no olvidar importar esto*/}
           {/* <Route path="*" element={<Navigate to="/404notfound" />} /> */}
         </Routes>

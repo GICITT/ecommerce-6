@@ -14,8 +14,12 @@ const NavBar = () => {
         Tienda
       </NavLink>
       <div className="buttonNavBar">
-        <button className="btnNav">Jeans</button>
-        <button className="btnNav">Remeras</button>
+        <Link to="/categoria/jean" className="btnNav">
+          Jeans
+        </Link>
+        <Link to="/categoria/remera" className="btnNav">
+          Remeras
+        </Link>
       </div>
       <Link to="/cartContountainer">
         <CartWidget />
