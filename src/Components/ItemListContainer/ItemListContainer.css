@@ -1,5 +1,7 @@
 .contenedorCards {
   display: flex;
   flex-direction: row;
-  background-color: rgb(181, 181, 208);
+  background-color: rgb(224, 224, 236);
+  height: 601px;
+  gap: 30px;
 }

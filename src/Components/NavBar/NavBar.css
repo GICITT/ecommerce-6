@@ -8,6 +8,10 @@
   margin-bottom: 15px;
 }
 
+.nav a.active {
+  color: rgb(231, 155, 13);
+}
+
 .buttonNavBar {
   gap: 50px;
   display: flex;
@@ -26,4 +30,8 @@
 .btnNav:hover {
   color: rgb(202, 151, 11);
   box-shadow: 5px 5px;
+}
+
+a.btnNav {
+  text-decoration: none;
 }

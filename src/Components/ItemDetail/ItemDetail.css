@@ -1,7 +1,7 @@
 .contenedorDetail {
   display: flex;
   flex-direction: row;
-  background-color: rgb(224, 159, 37);
+  background-color: rgba(244, 238, 236, 0.632);
 }
 
 .img {
@@ -10,7 +10,9 @@
   margin-top: 50px;
 }
 
-.contenedorCard {
+div.contenedorCard {
   background-color: rgb(227, 237, 246);
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

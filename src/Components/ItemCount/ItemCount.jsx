@@ -35,10 +35,14 @@ export function ItemCount({ initial, stock, onAdd }) {
       </div>
       <div className="btnContainer">
         <div>
-          <button onClick={() => onAdd(quantify)}>Agregar al carrito</button>
+          <button className="agregar" onClick={() => onAdd(quantify)}>
+            Agregar al carrito
+          </button>
         </div>
         <div>
-          <button onClick={reset}>Reset</button>
+          <button className="reiniciar" onClick={reset}>
+            Reiniciar
+          </button>
         </div>
       </div>
     </div>

@@ -5,16 +5,9 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <nav className="nav">
-      <NavLink
-        className={({ isActive }) =>
-          isActive ? `btn btn-primary` : `btn btn-outline-primary `
-        }
-        to="/"
-      >
-        Tienda
-      </NavLink>
+      <NavLink to="/">Tienda</NavLink>
       <div className="buttonNavBar">
-        <Link to="/categoria/jean" className="btnNav">
+        <Link to="/categoria/vaquero" className="btnNav">
           Jeans
         </Link>
         <Link to="/categoria/remera" className="btnNav">

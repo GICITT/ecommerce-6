@@ -9,12 +9,21 @@
   flex-direction: row;
   gap: 10px;
   align-content: space-between;
+  margin-top: 10px;
 }
 
 .btnIncrementDecrement {
   height: 30px;
   width: 30px;
   margin-top: 15px;
+  margin-top: 14px;
+  border: radius;
+  color: rgba(242, 234, 220, 0.829);
+  border-radius: 5px;
+  font-size: x-large;
+  background-color: #050505;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .quantify {
@@ -23,4 +32,22 @@
 
 .btnContainer {
   margin-left: 100px;
+}
+
+.agregar {
+  margin-top: 14px;
+  border: radius;
+  color: rgba(242, 234, 220, 0.829);
+  border-radius: 5px;
+  font-size: x-large;
+  background-color: #050505;
+}
+
+.reiniciar {
+  margin-top: 14px;
+  border: radius;
+  color: rgba(242, 234, 220, 0.829);
+  border-radius: 5px;
+  font-size: x-large;
+  background-color: #050505;
 }

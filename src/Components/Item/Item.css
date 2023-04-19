@@ -2,6 +2,7 @@
   width: 250px;
   height: 350px;
   margin-top: 50px;
+  border: 1px solid rgb(9, 9, 9);
 }
 
 .card {
@@ -20,7 +21,14 @@
 }
 
 .card-body {
-  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  background-color: rgba(244, 238, 236, 0.632);
+  width: 250px;
+  height: 140px;
+  padding-top: 10px;
 }
 
 .label {
@@ -29,7 +37,7 @@
 }
 
 .btnDetalle {
-  margin-top: 10px;
+  margin-top: 14px;
   border: radius;
   color: rgba(242, 234, 220, 0.829);
   border-radius: 5px;
