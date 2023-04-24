@@ -1,11 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CardWidget/CardWidget";
+import ExploreIcon from "@mui/icons-material/Explore";
 import "./NavBar.css";
 
 const NavBar = () => {
   return (
     <nav className="nav">
-      <NavLink to="/">Tienda</NavLink>
+      <NavLink className="tienda" to="/">
+        Tienda
+        <ExploreIcon />
+      </NavLink>
       <div className="buttonNavBar">
         <Link to="/categoria/vaquero" className="btnNav">
           Jeans

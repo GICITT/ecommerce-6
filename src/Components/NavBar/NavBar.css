@@ -1,3 +1,12 @@
+.tienda {
+  color: white;
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -9,7 +18,7 @@
 }
 
 .nav a.active {
-  color: rgb(231, 155, 13);
+  color: rgb(247, 167, 8);
 }
 
 .buttonNavBar {
@@ -19,7 +28,7 @@
 }
 .btnNav {
   border: radius;
-  color: rgba(196, 135, 30, 0.829);
+  color: rgba(250, 248, 244, 0.829);
   border-radius: 5px;
   font-size: x-large;
   background-color: #050505;
@@ -28,7 +37,7 @@
 }
 
 .btnNav:hover {
-  color: rgb(202, 151, 11);
+  color: rgb(235, 231, 221);
   box-shadow: 5px 5px;
 }
 

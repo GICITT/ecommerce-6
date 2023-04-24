@@ -2,7 +2,12 @@
   width: 250px;
   height: 350px;
   margin-top: 50px;
-  border: 1px solid rgb(9, 9, 9);
+  border: 1px solid rgba(9, 9, 9, 0.161);
+  cursor: pointer;
+}
+
+.img:hover {
+  box-shadow: 6px 6px rgba(12, 11, 11, 0.039);
 }
 
 .card {
@@ -37,6 +42,7 @@
 }
 
 .btnDetalle {
+  cursor: pointer;
   margin-top: 14px;
   border: radius;
   color: rgba(242, 234, 220, 0.829);
@@ -45,4 +51,9 @@
   background-color: #050505;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.btnDetalle:hover {
+  color: rgb(235, 231, 221);
+  box-shadow: 5px 5px;
 }

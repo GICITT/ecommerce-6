@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import "./ItemCount.css";
+import { ButtonCount } from "../ButtonCount/ButtonCount";
 
 export function ItemCount({ initial, stock, onAdd }) {
   const [quantify, setQuantify] = useState(initial); // nombre del estado, nombre de la funcion que mod el estado
@@ -34,11 +35,7 @@ export function ItemCount({ initial, stock, onAdd }) {
         </button>
       </div>
       <div className="btnContainer">
-        <div>
-          <button className="agregar" onClick={() => onAdd(quantify)}>
-            Agregar al carrito
-          </button>
-        </div>
+        <ButtonCount />
         <div>
           <button className="reiniciar" onClick={reset}>
             Reiniciar
