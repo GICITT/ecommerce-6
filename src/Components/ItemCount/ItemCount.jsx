@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { ButtonCount } from "../ButtonCount/ButtonCount";
+import { InputCount } from "../InputCoutn/InputCount";
 
 import "./ItemCount.css";
-import { ButtonCount } from "../ButtonCount/ButtonCount";
 
 export function ItemCount({ initial, stock, onAdd }) {
   const [quantify, setQuantify] = useState(initial); // nombre del estado, nombre de la funcion que mod el estado
+  const [inputType, setInputType] = useState(`button`);
+
   console.log(quantify);
 
   const increment = () => {
@@ -23,6 +26,10 @@ export function ItemCount({ initial, stock, onAdd }) {
     setQuantify(initial);
   };
 
+  const handleInter = () => {
+    setInputType(`input`);
+  };
+
   return (
     <div className="itemCount">
       <div className="btn">
@@ -35,7 +42,12 @@ export function ItemCount({ initial, stock, onAdd }) {
         </button>
       </div>
       <div className="btnContainer">
-        <ButtonCount />
+        {inputType === `button` ? (
+          <ButtonCount handleInter={handleInter} />
+        ) : (
+          <InputCount />
+        )}
+
         <div>
           <button className="reiniciar" onClick={reset}>
             Reiniciar

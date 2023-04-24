@@ -1,4 +1,5 @@
 import NavBar from "./Components/NavBar/NavBar";
+
 import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer";
 import { ItemDetailContainer } from "./Components/ItemDetailContainer/ItemDetailContainer";
 import "./App.css";
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/categoria/:cid" element={<ItemListContainer />} />
           <Route path="/detail/:pid" element={<ItemDetailContainer />} />
           <Route path="/form" element={<FormContainer />} />
+
           <Route path="/cartContountainer" element={<CartCountainer />} />
           {/*<Route path="/form" element={<FormContainer />} />  no olvidar importar esto*/}
           {/* <Route path="*" element={<Navigate to="/404notfound" />} /> */}

@@ -12,7 +12,7 @@ export const ItemDetailContainer = () => {
     mockFetch(pid)
       .then((resp) => setProductos(resp))
       .catch((err) => console.log(err));
-  }, []);
+  }, [pid]);
 
   return (
     <>

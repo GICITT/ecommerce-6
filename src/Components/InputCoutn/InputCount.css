@@ -1,0 +1,17 @@
+.btnIrAlCarrito {
+  margin-top: 14px;
+  border: radius;
+  color: rgba(242, 234, 220, 0.829);
+  border-radius: 5px;
+  font-size: x-large;
+  background-color: #050505;
+}
+
+.btnSeguirComprando {
+  margin-top: 14px;
+  border: radius;
+  color: rgba(242, 234, 220, 0.829);
+  border-radius: 5px;
+  font-size: x-large;
+  background-color: #050505;
+}
