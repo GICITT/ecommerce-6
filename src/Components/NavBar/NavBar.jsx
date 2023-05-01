@@ -11,10 +11,10 @@ const NavBar = () => {
         <ExploreIcon />
       </NavLink>
       <div className="buttonNavBar">
-        <Link to="/categoria/vaquero" className="btnNav">
+        <Link to="/categoria/vaqueros" className="btnNav">
           Jeans
         </Link>
-        <Link to="/categoria/remera" className="btnNav">
+        <Link to="/categoria/remeras" className="btnNav">
           Remeras
         </Link>
       </div>

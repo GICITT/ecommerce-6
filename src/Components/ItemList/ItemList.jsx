@@ -12,7 +12,7 @@ const ItemList = ({ productos }) => {
         id={producto.id}
         img={producto.img}
         categoria={producto.categoria}
-        precio={producto.precio} //hace una card con las props diferentes de cada item del array productos
+        precio={producto.precio}
       />
     )
   );

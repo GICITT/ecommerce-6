@@ -6,7 +6,7 @@ export const Item = ({ id, categoria, img, precio }) => {
     <div key={id} className="card w-25">
       <img src={img} className="img" alt="imagen" />
       <div className="card-body">
-        <label className="label">Nombre: {categoria}</label>
+        <label className="label">Categoria: {categoria}</label>
         <br></br>
         <label className="label">Precio: ${precio}</label>
         <br></br>

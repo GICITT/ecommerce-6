@@ -1,21 +1,25 @@
-.itemCount {
-  display: flex;
-  flex-direction: row;
-  margin-left: 100px;
+.imgCart {
+  width: 250px;
+  height: 350px;
+  margin-top: 50px;
+  border: 1px solid rgba(9, 9, 9, 0.161);
 }
 
-.btn {
+.cartContainer {
   display: flex;
   flex-direction: row;
-  gap: 10px;
-  align-content: space-between;
-  margin-top: 10px;
 }
 
-.btnIncrementDecrement {
-  height: 30px;
-  width: 30px;
-  margin-top: 15px;
+.cart {
+  display: flex;
+  flex-direction: row;
+}
+
+.btnVaciarCart {
+  margin-left: 20px;
+  width: 200px;
+  height: 50px;
+  cursor: pointer;
   margin-top: 14px;
   border: radius;
   color: rgba(242, 234, 220, 0.829);
@@ -26,26 +30,19 @@
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.quantify {
-  margin-bottom: 100px;
+.btnVaciarCart {
+  color: rgb(235, 231, 221);
+  box-shadow: 5px 5px;
 }
 
-.btnContainer {
-  margin-left: 100px;
-}
-
-.btnAdd {
+.eliminar {
+  margin-left: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  cursor: pointer;
   margin-top: 14px;
-  border: radius;
-  color: rgba(242, 234, 220, 0.829);
-  border-radius: 5px;
-  font-size: x-large;
-  background-color: #050505;
-}
-
-.btnReset {
-  margin-top: 14px;
-  border: radius;
+  margin-right: 20px;
   color: rgba(242, 234, 220, 0.829);
   border-radius: 5px;
   font-size: x-large;
