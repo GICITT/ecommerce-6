@@ -13,6 +13,7 @@
 .cart {
   display: flex;
   flex-direction: row;
+  gap: 200px;
 }
 
 .btnVaciarCart {
@@ -47,4 +48,8 @@
   border-radius: 5px;
   font-size: x-large;
   background-color: #050505;
+}
+
+.total {
+  background-color: rgba(162, 166, 166, 0.134);
 }

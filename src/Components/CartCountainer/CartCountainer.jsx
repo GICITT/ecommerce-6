@@ -3,7 +3,7 @@ import { useCartContext } from "../Context/CartContexts";
 import "./CartCountainer.css";
 
 export const CartCountainer = () => {
-  const { cartList, vaciarCarrito } = useCartContext();
+  const { cartList, vaciarCarrito, precioTotal } = useCartContext();
   console.log(cartList);
   return (
     <div className="cart">
@@ -25,6 +25,9 @@ export const CartCountainer = () => {
           Vaciar carrito
         </button>
       </Link>
+      <div>
+        <h3 className="total">Precio Total ${precioTotal()}</h3>
+      </div>
     </div>
   );
 };
