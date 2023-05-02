@@ -2,7 +2,7 @@ import { Item } from "../Item/Item";
 
 import "./itemList.css";
 
-const ItemList = ({ productos }) => {
+const ItemList = ({ productos, setIsLoading }) => {
   return productos.map(
     (
       producto // mapeame el array prdoductos y por cada producto devolveme una card producto

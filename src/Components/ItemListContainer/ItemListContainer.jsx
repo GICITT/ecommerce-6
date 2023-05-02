@@ -1,31 +1,86 @@
 import { useEffect, useState } from "react";
-import { mockFetch } from "../../Utils/mockFetch";
+//import { mockFetch } from "../../Utils/mockFetch";
 import ItemList from "../ItemList/ItemList";
-
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
 
 export const ItemListContainer = () => {
-  const [productos, setProductos] = useState([]); // lo inicializo con un array vacio, se va a cargargar con productos
+  const [productos, setProductos] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const { cid } = useParams();
 
   useEffect(() => {
+    const db = getFirestore();
+    const queryCollection = collection(db, `productos`);
+    let queryFilter = queryCollection;
+
     if (cid) {
-      mockFetch() //esta llamando a mockFetch
-        .then((resp) =>
-          setProductos(resp.filter((prod) => prod.categoria === cid))
-        ) // cuando la promesa se cumple se cargan los productos
-        .catch((err) => console.log(err));
-    } else {
-      mockFetch() //esta llamando a mockFetch
-        .then((resp) => setProductos(resp)) // cuando la promesa se cumple se cargan los productos
-        .catch((err) => console.log(err));
+      queryFilter = query(queryCollection, where(`categoria`, `==`, cid));
     }
+
+    getDocs(queryFilter)
+      .then((resp) =>
+        setProductos(
+          resp.docs.map((producto) => ({ id: producto.id, ...producto.data() }))
+        )
+      )
+      .catch((err) => console.log(err))
+      .finally(() => setIsLoading(false));
   }, [cid]);
+
+  //traer todos los productos --->itemlistcontainer
+
+  ///////////////////////////////trae los productos con algun filtro
+
+  // useEffect(() => {
+  //   const db = getFirestore();
+  //   const queryCollection = collection(db, `productos`);
+
+  //   const queryFilter = query(queryCollection, where(`categoria`, `==`, cid));
+
+  //   getDocs(queryFilter)
+  //     .then((resp) =>
+  //       setProductos(
+  //         resp.docs.map((producto) => ({ id: producto.id, ...producto.data() }))
+  //       )
+  //     )
+  //     .catch((err) => console.log(err))
+  //     .finally(() => setIsLoading(false));
+  // }, []);
+  // // console.log(productos);
+  // ///////////////////////////////////trae todos los productos
+  // useEffect(() => {
+  //   const db = getFirestore();
+  //   const queryCollection = collection(db, `productos`);
+
+  //   getDocs(queryCollection)
+  //     .then((resp) =>
+  //       setProductos(
+  //         resp.docs.map((producto) => ({ id: producto.id, ...producto.data() }))
+  //       )
+  //     )
+  //     .catch((err) => console.log(err))
+  //     .finally(() => setIsLoading(false));
+  // }, []);
+
+  // console.log(productos);
 
   return (
     <div className="contenedorCards">
-      <ItemList productos={productos} />
+      {isLoading ? (
+        <p>Cargando...</p>
+      ) : (
+        <ItemList productos={productos} setIsLoading={setIsLoading} />
+      )}
     </div>
   );
 };
