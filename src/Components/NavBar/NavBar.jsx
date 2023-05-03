@@ -6,6 +6,7 @@ import "./NavBar.css";
 
 const NavBar = () => {
   const { cantidadTotal } = useCartContext();
+
   return (
     <nav className="nav">
       <NavLink className="tienda" to="/">

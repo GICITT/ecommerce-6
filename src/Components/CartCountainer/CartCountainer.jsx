@@ -30,7 +30,7 @@ export const CartCountainer = () => {
           </div>
         ))}
       </div>
-      <Link to="/CartEmptyContainer" className="CartEmpty">
+      <Link to="/CartEmpty" className="CartEmpty">
         <button onClick={vaciarCarrito} className="btnVaciarCart">
           {" "}
           Vaciar carrito
