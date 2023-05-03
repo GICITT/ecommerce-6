@@ -44,3 +44,12 @@
 a.btnNav {
   text-decoration: none;
 }
+.numerito {
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+}
+
+.cartIcon {
+  margin-right: 10px;
+}

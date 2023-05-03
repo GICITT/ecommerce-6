@@ -1,12 +1,13 @@
+
 import "./CardWidget.css";
 
 const CartWidget = () => {
+  
   return (
     <div className="cartCarrito">
-      <i className="bi bi-cart"></i>
-      <div id="cardAmount" className="cardAmount">
-        0
-      </div>
+      <i className="bi bi-cart" id="cart"></i>
+     
+      <div id="cardAmount" className="cardAmount"></div>
     </div>
   );
 };

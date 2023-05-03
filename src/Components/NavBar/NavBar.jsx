@@ -1,9 +1,11 @@
 import { Link, NavLink } from "react-router-dom";
 import CartWidget from "../CardWidget/CardWidget";
 import ExploreIcon from "@mui/icons-material/Explore";
+import { useCartContext } from "../Context/CartContexts";
 import "./NavBar.css";
 
 const NavBar = () => {
+  const { cantidadTotal } = useCartContext();
   return (
     <nav className="nav">
       <NavLink className="tienda" to="/">
@@ -19,7 +21,10 @@ const NavBar = () => {
         </Link>
       </div>
       <Link to="/cartContountainer">
-        <CartWidget />
+        <div className="numerito">
+          <CartWidget />
+          {cantidadTotal()}
+        </div>
       </Link>
     </nav>
   );

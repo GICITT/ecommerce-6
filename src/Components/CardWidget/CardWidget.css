@@ -2,3 +2,9 @@
   display: flex;
   flex-direction: row;
 }
+
+#cart {
+  color: aliceblue;
+  width: 25px;
+  height: 25px;
+}
