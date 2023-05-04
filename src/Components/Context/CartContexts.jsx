@@ -40,7 +40,7 @@ export const CartContextProvider = ({ children }) => {
       0
     );
   };
-
+  console.log(cartList);
   return (
     <CartContext.Provider
       value={{

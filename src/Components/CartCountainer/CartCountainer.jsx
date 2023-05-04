@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useCartContext } from "../Context/CartContexts";
-import "./CartCountainer.css";
+import { Form } from "../Form/Form";
+
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { useState } from "react";
+import "./CartCountainer.css";
 
 export const CartCountainer = () => {
   const [id, setId] = useState(null);
@@ -17,6 +19,15 @@ export const CartCountainer = () => {
   console.log(formData);
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (
+      formData.name === "" ||
+      formData.phone === "" ||
+      formData.email === ""
+    ) {
+      alert("Por favor complete todos los campos requeridos");
+      return;
+    }
     const order = {
       buyer: formData,
       items: cartList.map(({ id, categoria, precio }) => ({
@@ -31,30 +42,10 @@ export const CartCountainer = () => {
     const queryCollection = collection(db, `orders`);
 
     addDoc(queryCollection, order)
-      .then((resp) => setId(resp))
+      .then((resp) => setId(resp.id)) // capturar el id de la compra y asignarlo a "id"
       .catch((err) => console.log(err))
       .finally(() => console.log("termino la promesa"));
     vaciarCarrito();
-
-    //actualizar
-    // const queryDoc = doc(db, `productos`, `46XZhjK2GWih2vEQkEyu`);
-    // updateDoc(queryDoc, { stock: 5 }).finally(() =>
-    //   console.log("termino de actualizar")
-    // );
-
-    //realizar operaciones multipres
-
-    // const queryCollection = collection(db, `orders`);
-    // const queryDoc1 = doc(queryCollection);
-    // const queryDoc2 = doc(queryCollection);
-    // const queryDoc3 = doc(queryCollection, ` 46XZhjK2GWih2vEQkEyu`);
-    // const batch = writeBatch(db);
-
-    // batch.set(queryDoc1, { buyer: `Nombre 1`, total: 1500 });
-    // batch.set(queryDoc2, { buyer: `Nombre 1`, total: 1500 });
-    // batch.update(queryDoc3, { buyer: `Nombre 1`, total: 1500 });
-
-    // batch.commit();
 
     console.log(`enviando `, order);
   };
@@ -95,37 +86,12 @@ export const CartCountainer = () => {
       </Link>
       <div>
         <h3 className="total">Precio Total ${precioTotal()}</h3>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="ingrese el name "
-            onChange={handleNameChange}
-            value={formData.name}
-          />
-          <input
-            type="text"
-            name="phone"
-            placeholder="ingrese el phone"
-            onChange={handleNameChange}
-            value={formData.phone}
-          />
-          <input
-            type="text"
-            name="email"
-            placeholder="ingrese el email"
-            onChange={handleNameChange}
-            value={formData.email}
-          />
-          {/*<input
-            type="text"
-            name="repetirmail"
-            placeholder="ingrese el "
-            onChange={() => {}}
-            value={""}
-        />*/}
-          <button type="submit"> Generar orden de compra</button>
-        </form>
+        {id && <p>El ID de tu compra es: {id}</p>}
+        <Form
+          handleSubmit={handleSubmit}
+          handleNameChange={handleNameChange}
+          formData={formData}
+        />
       </div>
     </div>
   );
