@@ -1,4 +1,4 @@
-export const Form = ({ handleSubmit, handleNameChange, formData, id }) => {
+export const Form = ({ handleSubmit, handleOnChange, formData, id }) => {
   return (
     <form onSubmit={handleSubmit}>
       {id && <p>El id de tu compra es: {id}</p>}
@@ -6,14 +6,14 @@ export const Form = ({ handleSubmit, handleNameChange, formData, id }) => {
         type="text"
         name="name"
         placeholder="ingrese el name "
-        onChange={handleNameChange}
+        onChange={handleOnChange}
         value={formData.name}
       />
       <input
         type="text"
         name="phone"
         placeholder="ingrese el phone"
-        onChange={handleNameChange}
+        onChange={handleOnChange}
         value={formData.phone}
       />
       <input
@@ -21,7 +21,7 @@ export const Form = ({ handleSubmit, handleNameChange, formData, id }) => {
         type="email"
         name="email"
         placeholder="ingrese el email"
-        onChange={handleNameChange}
+        onChange={handleOnChange}
         value={formData.email}
       />
       <button type="submit"> Generar orden de compra</button>

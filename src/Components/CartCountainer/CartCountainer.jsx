@@ -50,7 +50,7 @@ export const CartCountainer = () => {
     console.log(`enviando `, order);
   };
 
-  const handleNameChange = (event) => {
+  const handleOnChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
@@ -89,7 +89,7 @@ export const CartCountainer = () => {
         {id && <p>El ID de tu compra es: {id}</p>}
         <Form
           handleSubmit={handleSubmit}
-          handleNameChange={handleNameChange}
+          handleOnChange={handleOnChange}
           formData={formData}
         />
       </div>
