@@ -86,7 +86,7 @@ export const CartCountainer = () => {
       </Link>
       <div>
         <h3 className="total">Precio Total ${precioTotal()}</h3>
-        {id && <p>El ID de tu compra es: {id}</p>}
+
         <Form
           handleSubmit={handleSubmit}
           handleOnChange={handleOnChange}
