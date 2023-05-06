@@ -3,8 +3,8 @@ import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import {
   collection,
-  doc,
-  getDoc,
+  //  doc,
+  // getDoc,
   getDocs,
   getFirestore,
   query,
@@ -77,7 +77,7 @@ export const ItemListContainer = () => {
   return (
     <div className="contenedorCards">
       {isLoading ? (
-        <p>Cargando...</p>
+        <p className="cargando">Cargando...</p>
       ) : (
         <ItemList productos={productos} setIsLoading={setIsLoading} />
       )}

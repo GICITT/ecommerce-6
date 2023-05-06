@@ -28,6 +28,12 @@ export const CartCountainer = () => {
       alert("Por favor complete todos los campos requeridos");
       return;
     }
+
+    if (formData.email !== formData.confirmEmail) {
+      alert("Los campos de email no coinciden");
+      return;
+    }
+
     const order = {
       buyer: formData,
       items: cartList.map(({ id, categoria, precio }) => ({
@@ -56,20 +62,26 @@ export const CartCountainer = () => {
 
   return cartList.length === 0 ? (
     id !== null && (
-      <div>
-        <p className="Id">ID de la compra: {id}</p>{" "}
-        <button> Volver al home</button>
+      <div className="center-container">
+        <p className="Id">El ID de tu compra es: {id}</p>{" "}
+        <Link to="/">
+          <button className="btnVolverHome"> Volver al home</button>
+        </Link>
       </div>
     )
   ) : (
     <div className="cart">
       <div>
         {cartList.map((productos) => (
-          <div className="cartContainer" key={productos.id}>
-            <div>
+          <div key={productos.id}>
+            <div className="cartContainer">
               <img src={productos.img} alt="img" className="imgCart" />
-              Cargoria: {productos.categoria}
-              Cantidad: {productos.cantidad}
+              <div className="cart-item-category">
+                Categoría: {productos.categoria}
+              </div>
+              <div className="cart-item-quantity">
+                Cantidad: {productos.cantidad}
+              </div>
               <button
                 className="eliminar"
                 onClick={() => eliminarProducto(productos.id)}

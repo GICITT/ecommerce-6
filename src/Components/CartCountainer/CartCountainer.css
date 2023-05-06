@@ -8,12 +8,14 @@
 .cartContainer {
   display: flex;
   flex-direction: row;
+  width: 600px;
 }
 
 .cart {
   display: flex;
   flex-direction: row;
   gap: 200px;
+  background-color: rgba(244, 238, 236, 0.632);
 }
 
 .btnVaciarCart {
@@ -22,11 +24,11 @@
   height: 50px;
   cursor: pointer;
   margin-top: 14px;
-  border: radius;
-  color: rgba(242, 234, 220, 0.829);
+  border: none;
+  color: rgba(6, 6, 5, 0.829);
   border-radius: 5px;
   font-size: x-large;
-  background-color: #050505;
+  background-color: #eb1313;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -36,6 +38,17 @@
   box-shadow: 5px 5px;
 }
 
+.cart-item-category {
+  font-weight: bold;
+  margin-top: 200px;
+  margin-left: 20px;
+}
+
+.cart-item-quantity {
+  font-weight: bold;
+  margin-top: 200px;
+  margin-left: 20px;
+}
 .eliminar {
   margin-left: 20px;
   width: 30px;
@@ -48,6 +61,7 @@
   border-radius: 5px;
   font-size: x-large;
   background-color: #050505;
+  margin-top: 190px;
 }
 
 .total {
@@ -56,4 +70,27 @@
 
 .Id {
   color: brown;
+}
+
+.btnVolverHome {
+  cursor: pointer;
+  margin-top: 14px;
+  border: radius;
+  color: rgba(250, 249, 248, 0.829);
+  border-radius: 5px;
+  font-size: x-large;
+  background-color: #050505;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-color: rgba(242, 234, 220, 0.829);
+
+  flex-direction: column;
+  border: 1px solid black;
 }
