@@ -55,10 +55,12 @@ export const CartCountainer = () => {
   };
 
   return cartList.length === 0 ? (
-    <div>
-      <h2>No hay productos en tu carrito</h2>
-      <Link to="/">Ir a ver productos</Link>
-    </div>
+    id !== null && (
+      <div>
+        <p className="Id">ID de la compra: {id}</p>{" "}
+        <button> Volver al home</button>
+      </div>
+    )
   ) : (
     <div className="cart">
       <div>
@@ -86,7 +88,6 @@ export const CartCountainer = () => {
       </Link>
       <div>
         <h3 className="total">Precio Total ${precioTotal()}</h3>
-
         <Form
           handleSubmit={handleSubmit}
           handleOnChange={handleOnChange}
