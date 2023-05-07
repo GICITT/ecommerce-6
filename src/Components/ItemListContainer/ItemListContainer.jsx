@@ -37,43 +37,6 @@ export const ItemListContainer = () => {
       .finally(() => setIsLoading(false));
   }, [cid]);
 
-  //traer todos los productos --->itemlistcontainer
-
-  ///////////////////////////////trae los productos con algun filtro
-
-  // useEffect(() => {
-  //   const db = getFirestore();
-  //   const queryCollection = collection(db, `productos`);
-
-  //   const queryFilter = query(queryCollection, where(`categoria`, `==`, cid));
-
-  //   getDocs(queryFilter)
-  //     .then((resp) =>
-  //       setProductos(
-  //         resp.docs.map((producto) => ({ id: producto.id, ...producto.data() }))
-  //       )
-  //     )
-  //     .catch((err) => console.log(err))
-  //     .finally(() => setIsLoading(false));
-  // }, []);
-  // // console.log(productos);
-  // ///////////////////////////////////trae todos los productos
-  // useEffect(() => {
-  //   const db = getFirestore();
-  //   const queryCollection = collection(db, `productos`);
-
-  //   getDocs(queryCollection)
-  //     .then((resp) =>
-  //       setProductos(
-  //         resp.docs.map((producto) => ({ id: producto.id, ...producto.data() }))
-  //       )
-  //     )
-  //     .catch((err) => console.log(err))
-  //     .finally(() => setIsLoading(false));
-  // }, []);
-
-  // console.log(productos);
-
   return (
     <div className="contenedorCards">
       {isLoading ? (
